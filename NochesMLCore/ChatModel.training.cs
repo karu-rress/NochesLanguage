@@ -32,7 +32,7 @@ namespace NochesMLCore
                                     .Append(mlContext.Transforms.Concatenate(@"Features", @"col1"))      
                                     .Append(mlContext.Transforms.Conversion.MapValueToKey(@"col0", @"col0"))      
                                     .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(l1Regularization:1F,l2Regularization:1F,labelColumnName:@"col0",featureColumnName:@"Features"), labelColumnName: @"col0"))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(l1Regularization:10.6605313725324F,l2Regularization:1.1894580174975F,labelColumnName:@"col0",featureColumnName:@"Features"), labelColumnName: @"col0"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(@"PredictedLabel", @"PredictedLabel"));
 
             return pipeline;

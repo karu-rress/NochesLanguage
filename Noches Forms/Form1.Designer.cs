@@ -42,9 +42,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 35);
+            this.label1.Size = new System.Drawing.Size(266, 35);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NOCHES 말투 분석기";
+            this.label1.Text = "ShareTech 말투 분석기";
             // 
             // textBox1
             // 
@@ -111,7 +111,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "NOCHES × Rolling Ress";
+            this.Text = "ShareTech × Rolling Ress";
             this.ResumeLayout(false);
             this.PerformLayout();
 

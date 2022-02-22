@@ -17,7 +17,7 @@ namespace NochesMLCore
             SetConsoleCP(949);
             SetConsoleOutputCP(949);
             Console.WriteLine("=====================================");
-            Console.WriteLine("  NOCHES 말투 분석기");
+            Console.WriteLine("  ShareTech 말투 분석기");
             Console.WriteLine("=====================================\n");
             Console.WriteLine("추론하고 싶은 문장을 입력하세요.");
             Console.WriteLine("exit를 입력하면 종료합니다.\n");

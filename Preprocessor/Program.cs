@@ -4,7 +4,6 @@ using static System.Linq.Enumerable;
 void PrintBar() => Console.WriteLine(new string('=', 30));
 string RefineName(string name) => name switch
 {
-    "심승빈 으엥치놈" => "심승빈",
     "ﾠ" => "나선우",
     _ => name
 };
@@ -14,8 +13,8 @@ PrintBar();
 Console.WriteLine(@" 카카오톡 채팅 데이터 분석을 시작합니다.");
 PrintBar();
 
-Regex regex = new(@"^[\d. 오전후:]*?, (.*?) : (.*)$");
-string[] lines = File.ReadAllLines(@"D:\Programming\.NET\C#\NochesLanguage\Preprocessor\raw.txt");
+Regex regex = new(@"^\[(.*?)\] \[\d*:\d* [AP]M\] (.+)$");
+string[] lines = File.ReadAllLines(@"D:\Programming\.NET\C#\NochesLanguage\Preprocessor\sharetech.txt");
 
 List<(string name, string msg)> chatData = new();
 foreach (string line in lines)
@@ -35,7 +34,10 @@ foreach (string line in lines)
     string msg = groups[2].Value.Trim();
 
     // 의미 있는 메시지가 아니어도 다음 문장으로
-    if (new[] { "사진", "동영상", "이모티콘", "삭제된 메시지입니다." }.Any(x => x == msg))
+    if (new[] { "Photo", "videos", "Emoticons", "This message was deleted." }.Any(x => x == msg))
+        continue;
+
+    if (msg.Contains(" photos"))
         continue;
 
     if (msg.Length <= 2)

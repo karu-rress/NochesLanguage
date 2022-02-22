@@ -8,7 +8,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>False</UseWPF>
+    <ApplicationIcon>Monterey.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Monterey.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NochesMLCore\NochesMLCore.csproj" />
